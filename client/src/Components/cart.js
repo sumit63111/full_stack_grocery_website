@@ -106,7 +106,7 @@ const Cart = () => {
 
 {
   (cart && cart !== null && cart.length>0) ?
-  <motion.div  {...slideTop} transition={{ delay:2, duration:1}} className="bg-yellow-200 rounded-t-[60px] w-full h-[45%] flex flex-col items-center justify-center pb-20 cursor-pointer px-4 py-3 gap-4">
+  <motion.div  {...slideTop} transition={{ delay:0.3, duration:0.3}} className="bg-yellow-200 rounded-t-[60px] w-full h-[45%] flex flex-col items-center justify-center pb-20 cursor-pointer px-4 py-3 gap-4">
           <div className="w-full flex items-center justify-between px-16">
             <p className="text-2xl text-zinc-800 font-bold ">
              Sub Total
@@ -182,7 +182,7 @@ export const CartItemCard=({index,data})=>{
          dispatch(setCartItems(items))
          setTimeout(() => {
           dispatch(alertNull())
-        }, 3000);
+        }, 1000);
       
         
        
@@ -198,7 +198,7 @@ export const CartItemCard=({index,data})=>{
         dispatch(setCartItems(items))
         setTimeout(() => {
           dispatch(alertNull())
-        }, 3000);
+        }, 1000);
        
       })
      })
@@ -209,7 +209,7 @@ export const CartItemCard=({index,data})=>{
  , [data,itemTotal])
   return(
     <motion.div
-    key={index} {...staggerFadeInFadeOut(index)} transition={{delay:(index*0.5)+2}}
+    key={index} {...staggerFadeInFadeOut(index)} transition={{delay:(index*0.2)+1}}
     className="w-full flex items-center justify-start bg-yellow-200 rounded-md drop-shadow-md px-4 gap-4"
     >
     <img src={data?.imageURL} className="w-24 min-w-[94px] h-24 object-contain "  />

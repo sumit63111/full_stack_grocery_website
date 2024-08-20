@@ -9,6 +9,7 @@ import {Link, useNavigate } from "react-router-dom";
 import { nullUserDetails } from "../Context/Actions/userActions";
 import { app } from '../config/firebase.config'
 import { alertNull, alertSuccess } from '../Context/Actions/alertActions'
+import { profileNull } from '../Context/Actions/profileActions'
 
 const DashboardHeader = () => {
     const firebaseAuth=getAuth(app)
@@ -19,10 +20,13 @@ const DashboardHeader = () => {
     const signOut=()=>{
         firebaseAuth.signOut().then(()=>{
           dispatch(nullUserDetails())
+          dispatch(nullUserDetails())
+          dispatch(profileNull())
           dispatch(alertSuccess("Admin LogOut Successfully"))
           setTimeout(() => {
             dispatch(alertNull())
           }, 3000);
+
           navigate("/login", {replace : true})
         }).catch((err)=> console.log(err))
       }

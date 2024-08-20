@@ -4,7 +4,8 @@ const ProfileReducers =(state=null,action)=>{
             return action.data
         case "GET_PROFILE":
             return state
-        
+        case "SET_PROFILE_NULL":
+            return action.data
         default:
             return state
     }

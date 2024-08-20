@@ -10,3 +10,10 @@ export const getProfile=(items)=>{
         
     }
 }
+
+export const profileNull=()=>{
+    return{
+        type:"SET_PROFILE_NULL",
+        data:null
+    }
+}

@@ -41,16 +41,16 @@ const DashboardUsers = () => {
         title: "Email",
         field: "userEmail",
       },
-      {
-        title: "Verified",
-        field: "userVerified",
-        render: (rowData) => (
-          <p className={`px-2 py-1 w-32 text-center text-primary rounded-md ${rowData.userEmailVerified=="true" ? "bg-emerald-500" : "bg-red-500"}`}>
+      // {
+      //   title: "Verified",
+      //   field: "userVerified",
+      //   render: (rowData) => (
+      //     <p className={`px-2 py-1 w-32 text-center text-primary rounded-md ${rowData.userEmailVerified=="true" ? "bg-emerald-500" : "bg-red-500"}`}>
             
-           {rowData.userEmailVerified=="true"? "Verified" : "Not Verified"}
-          </p>
-        ),
-      },
+      //      {rowData.userEmailVerified=="true"? "Verified" : "Not Verified"}
+      //     </p>
+      //   ),
+      // },
     ]}
     data={allUserProfile}
     title={"List Of Users"}
