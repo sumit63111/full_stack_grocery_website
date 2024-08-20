@@ -44,7 +44,7 @@ const App = () => {
     console.log("USERSSSSSSSSSSSSSSSS Details :",user)
     if(user)
     {
-      const userDetail={
+      const userDetail= {
         userProfileImage:`${user?.picture?user?.picture:"NA"}`,
         userName:`${user?.name?user?.name:"NA"}`, 
         userEmail:`${user?.email?user?.email:"NA"}`,
